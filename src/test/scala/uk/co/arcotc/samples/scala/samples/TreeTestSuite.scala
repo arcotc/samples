@@ -1,0 +1,29 @@
+package uk.co.arcotc.samples.scala.samples
+
+import org.scalatest.junit.JUnitSuite
+import org.junit.Test
+import org.junit.Assert._
+
+class TreeTestSuite extends JUnitSuite {
+  @Test
+  def shouldComputeConstValueTreeCorrectly {
+    val exp: Tree = Sum(Sum(Const(5),Const(5)),Sum(Const(7),Const(7)))
+
+    assertEquals(24, Tree.eval(exp))
+  }
+
+  @Test
+  def shouldComputeMixedTreeCorrectly {
+    val exp: Tree = Sum(Sum(Var("x"),Var("x")),Sum(Const(7),Var("y")))
+    val env: String => Int = { case "x" => 5 case "y" => 7 }
+
+    assertEquals(24, Tree.eval(exp, env))
+  }
+
+  @Test
+  def test {
+    val expected = "uk.co.arcotc.samples.scala.samples.Sum(Sum(Const(1),Const(1)),Sum(Const(0),Const(0)))"
+    val exp: Tree = Sum(Sum(Var("x"),Var("x")),Sum(Const(7),Var("y")))
+    assertEquals(expected, Tree.derive(exp , "x"))
+  }
+}
