@@ -1,4 +1,4 @@
-package uk.co.arcotc.samples.scala.samples
+package uk.co.arcotc.simple
 
 import org.scalatest.junit.JUnitSuite
 import org.junit.Test
