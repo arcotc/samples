@@ -2,3 +2,14 @@ Code Samples
 ------------
 
 This repository contains code samples and examples.
+
+Once downloaded this code can be compiled using either Maven or SBT.
+
+Maven:
+mvn clean package
+
+SBT:
+sbt
+> update
+> compile
+> test
