@@ -1,4 +1,4 @@
-package uk.co.arcotc.simple
+package uk.co.arcotc.simple.shape
 
 class Triangle(b: Int, h: Int) extends Shape {
   def area: Double = {

@@ -1,5 +1,9 @@
 package uk.co.arcotc.simple
 
+/**
+ * Sort a list of strings into order of ascending height,
+ * e.g. the following list 6'2", 4'6", 4'10" and 5'10" would return 4'6", 4'10", 5'10", 6'2"
+ */
 object HeightSorter {
   def sort(listOfStrings: List[String]): List[(String, String)] = {
     listOfStrings.map(str => str.split("'"))

@@ -1,4 +1,4 @@
-package uk.co.arcotc.simple
+package uk.co.arcotc.simple.shape
 
 import scala.math.Pi
 
